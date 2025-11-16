@@ -1,0 +1,37 @@
+       2D Heat Equation - MPI Performance Analysis
+-----------------------------------------------------------
+
+  Grid: 2048 x 2048 / Processes: 8 / Timesteps: 1000
+  Rows per process: ~256 / Halo cells: 2 per process
+                    PERFORMANCE METRICS
+================================================================
+
+Timing Breakdown:
+----------------------------------------------------------------
+  Total execution time:      5.743894 seconds
+  Average computation time:  2.127556 seconds (37.04%)
+  Average communication time: 2.270185 seconds (39.53%)
+  Average wait time:         2.256025 seconds (39.28%)
+
+Load Balance Analysis:
+----------------------------------------------------------------
+  Overall load imbalance:    0.01%
+  Computation imbalance:     96.64%
+  Communication imbalance:   92.97%
+  Time range: [5.743362, 5.743894] seconds
+
+Parallel Efficiency:
+----------------------------------------------------------------
+  Total messages sent:       14000 messages
+  Computation/Communication ratio: 0.94
+  Parallel efficiency estimate:    37.04%
+  Communication overhead:          39.53%
+
+Time Distribution:
+----------------------------------------------------------------
+  Computation:    37.0%
+  Communication:  39.5%
+(halo exchange):  0.2%
+    (Wait/Sync):  39.3%
+  Other/Overhead: 23.4%
+
