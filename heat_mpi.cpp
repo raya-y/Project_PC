@@ -48,7 +48,7 @@ void heat_step(int rows, int cols) {
 	double rx = ALPHA * DT / (DX * DX);
 	double ry = ALPHA * DT / (DY * DY);
 
-	// Update interior points (skip boundaries as if they generate heat)
+	// Update interior points (skip boundaries bc they generate heat)
 	for (int i = 1; i < rows - 1; i++) {
 		for (int j = 1; j < cols - 1; j++) {
 			grid_new[i][j] = grid_old[i][j] +
@@ -244,4 +244,5 @@ int main(int argc, char *argv[]) {
 
 	MPI_Finalize();
 	return 0;
+
 }
