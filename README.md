@@ -21,18 +21,6 @@ This repository contains two small parallel programming projects used for experi
 - A C/C++ compiler with OpenMP support (e.g. `gcc` / `g++`).
 - An MPI implementation (e.g. OpenMPI or MPICH) for the MPI project.
 
-Install on Ubuntu/Debian (example):
-
-```bash
-sudo apt update
-sudo apt install build-essential openmpi-bin libopenmpi-dev gfortran git python3-pip
-```
-
-For Jupyter notebook support (optional):
-
-```bash
-python3 -m pip install --user notebook
-```
 
 **Build & Run**
 
@@ -78,15 +66,6 @@ jupyter notebook Pc_sequential_.ipynb
 **Results**
 
 - Example outputs for the heat solver are in `Heat_eq_MPI/Results/` (e.g. `output_1p.txt`, `output_2p.txt`, `output_4p.txt`, ...).
-
-
-**Notes & Tips**
-
-- Use `mpirun`/`mpiexec` provided by your MPI implementation to run MPI binaries.
-- For performance testing, vary `-np` for MPI and number of threads (`OMP_NUM_THREADS`) for OpenMP.
-- If a program expects input files or runtime flags, inspect the top of the source file for usage instructions.
-
-
 
 
 ---
